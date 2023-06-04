@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <notifications style="top: 10%; right: -4px" :duration="5000" group="foo" />
+    <v-app>
+      <router-view />
+      <v-fab-transition>
+        
+        
+      </v-fab-transition>
+    </v-app>
   </div>
 </template>
 
@@ -14,7 +17,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
+  background-color: #181818;
 }
 
 nav {
@@ -22,7 +26,7 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #ffffff;
 
     &.router-link-exact-active {
       color: #42b983;
